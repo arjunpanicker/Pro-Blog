@@ -1,0 +1,91 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background: url("../images/light_back1.jpg") no-repeat;
+    background-size: cover;
+}
+
+.navbar {
+    background: transparent;
+}
+
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.left-text {
+    height: 80%;
+    width: 50%;
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    
+}
+
+.left-text-inner span {
+    display: inline-block;
+    text-transform: uppercase;
+    animation: spin-letters 10s linear;
+}
+
+.left-text-inner {
+    align-self: center;
+}
+
+/* .formSignUp {
+    height: 80%;
+    width: 50%;
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+    justify-content: center;
+    color: white;
+} */
+
+@keyframes logoChanger {
+    0% {
+        opacity: 0;
+        transform: scale(1.5);
+    }
+    20% {
+        opacity: 1;
+    }
+    89% {
+        opacity: 1;
+        transform: scale(1);
+    }    
+    100% {
+        opacity: 0;
+        transform: translateZ(-1000em);
+    }
+}
+
+@keyframes spin-letters {
+    0%, 10% {
+      opacity: 0;
+      transform: rotateY(90deg);
+    }
+    30% {
+      opacity: 1;
+    }
+    70%, 86% {
+      transform: rotateY(0);
+      opacity: 1;
+    }
+    95%, 100% {
+      /* opacity: 0; */
+    }
+  }
+  
+
+
+
