@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<template>
+    <link rel="stylesheet" href="css/loader.css">
+    <div class="loader"></div>
+    <h1 style="margin-top: 50%; color: white; font-size: 50px;">Hello</h1> 
+</template>
+
+<script>
+    (function () {
+        var thisDoc = document.currentScript.ownerDocument;
+        var thatDoc = document;
+        var tmpl = thisDoc.querySelector('template');
+        var Element = Object.create(HTMLElement.prototype);
+        var shadowRoot;
+
+        Element.createdCallback = function () {
+            shadowRoot = this.createShadowRoot();
+            var clone = thatDoc.importNode(tmpl.content, true);
+            shadowRoot.appendChild(clone);
+        }
+
+        thatDoc.registerElement('page-loader', { prototype: Element });
+    })();
+
+</script>

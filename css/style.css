@@ -120,6 +120,17 @@ body {
       align-self: auto;
   }
   
+  #pageLoaderBackdrop {
+      background-color: #111;
+      opacity: 0.65;
+      *background: none;
+      position: absolute;
+      color: white;
+      z-index: 9001;
+      top: 0;
+      left: 0;
+      width: 100%;
+  }
 
 
 
