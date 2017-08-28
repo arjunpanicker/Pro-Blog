@@ -1,14 +1,22 @@
 html, body {
     margin: 0;
     padding: 0;
-    height: 100%;
+    max-height: 100%;
     width: 100%;
 }
 
 body {
     background: url("../images/light_back1.jpg") no-repeat;
-    background-size: cover;
+    background-size: auto;
 }
+
+.nav-item:hover {
+    border-bottom: solid white 2px;
+}
+
+/* .nav-item:visited {
+    border-bottom: solid white 2px;
+} */
 
 .navbar {
     background: transparent;
@@ -17,7 +25,7 @@ body {
 .flex-container {
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .left-text {
@@ -26,13 +34,14 @@ body {
     display: flex;
     flex-flow: row wrap;
     text-align: center;
-    justify-content: center;
+    justify-content: flex-start;
     color: white;
     
 }
 
 .formSignUp {
-    height: 80%;
+    
+    margin-top: 2%;
     display: flex;
     width: auto;
     flex-flow: row wrap;
@@ -51,7 +60,8 @@ body {
 }
 
 .left-text-inner {
-    align-self: center;
+    margin-top: 4%;
+    align-self: flex-start;
 }
 
 /* .formSignUp {
@@ -97,6 +107,17 @@ body {
     95%, 100% {
       /* opacity: 0; */
     }
+  }
+
+  #aboutUs {
+      height: 100%;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+  }
+
+  .center-heading {
+      align-self: auto;
   }
   
 
