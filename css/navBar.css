@@ -1,0 +1,30 @@
+body {
+    background: url("../images/technology.jpg"); 
+    background-size: cover;
+}
+
+.locationItem {
+    height: 400px;
+    width: 50%;
+    align-self: center;
+}
+
+.text {
+    align-self: center;
+    font-size: 20px;
+}
+
+.locationMap {
+    display: flex;
+    color: white;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.nav-item:hover, .active {
+    border-bottom: solid white 2px;
+}
+
+.nav-item {
+    margin-left: 5px;
+}

@@ -11,9 +11,10 @@ function findMe() {
         var latitude = position.coords.latitude;
         var longitude = position.coords.longitude;
         var loc = { lat: latitude, lng: longitude };
+        console.log(loc);
 
         var map2 = new google.maps.Map(document.getElementById('yourLoc'), {
-            zoom: 4,
+            zoom: 18,
             center: loc
         });
 
@@ -25,7 +26,7 @@ function findMe() {
         // output.innerHTML = "<p> Latitude: " + latitude + "&deg;, Longitude: " + longitude + "&deg;</p>";
 
         // var img = new Image();
-        // img.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + latitude + "," + longitude + "&markers=color:red%7Clabel:A%7C&zoom=13&size=400x400&key=AIzaSyC03NlhKh5OqGc5tIf212Sa2yq4zsnisio";
+        // img.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + latitude + "," + longitude + "&markers=color:red%7Clabel:A%7C&zoom=18&size=400x400&key=AIzaSyChFRGD_TUgexfXt7nwK6p3KllHPZsDaJY";
         // output.appendChild(img);
 
     }

@@ -13,37 +13,50 @@
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
         crossorigin="anonymous"></script>
-    <style>
-        #officeLoc,
-        #yourLoc {
-            height: 400px;
-            width: 50%;
-        }
-    </style>
+    <script src="https://use.fontawesome.com/a334639211.js"></script>
+    <link rel="stylesheet" href="../css/navBar.css">
 </head>
 
-<body>
-    <div id="officeLoc" class="pull-left" style="float: left;"></div>
-    <div id="yourLoc" class="pull-right"></div>
+<body class="container-fluid">
+    <nav class="navbar navbar-expand-md navbar-dark">
+        <a class="navbar-brand" href="../index.html">Pro-blog</a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
+            aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">About Us <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+            <form action="" method="POST" class="form-inline mt-2 mt-md-0" name="loginForm" id="loginForm">
+                <input class="form-control mr-sm-2" type="text" name="username" placeholder="Username" aria-label="username">
+                <input class="form-control mr-sm-2" type="password" name="password" placeholder="Password" aria-label="password">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="button" onclick="checkLogin();">Login!</button>
+            </form>
+        </div>
+    </nav>
+
+    <!-- Google Map -->
+    <div class="locationMap">
+        <div class="text">We are located here</div>
+        <div class="locationItem" id="yourLoc"></div>
+    </div>
+
+    <button type="button" class="btn tbn-default" aria-label="Go Back" onclick="goBack();">
+            <i class="fa fa-arrow-left" aria-hidden="true"> Go Back</i>
+    </button>
+    <button type="button" class="btn tbn-default" aria-label="Go Front" onclick="goFront();">
+            Go Front <i class="fa fa-arrow-right" aria-hidden="true"></i>
+    </button>
 
     <!-- javascript files -->
-    <script src="../js/geolocationApi.js"></script>
-    <script>
-        function initMap() {
-            var loc = { lat: 47.6393012, lng: -122.1984234 };
-
-            var map1 = new google.maps.Map(document.getElementById('officeLoc'), {
-                zoom: 15,
-                center: loc
-            });
-
-            var marker1 = new google.maps.Marker({
-                position: loc,
-                map: map1
-            });
-        }
-    </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOKBmzV2HAEqQL_1Bz_uD8J2rLVV_wm2o&callback=initMap"></script>
+    <script src="../js/geolocationAPI.js"></script>
+    <script src="../js/historyAPI.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8vSzKSqQh87uZ_Mbt-bXzvf6rr2dI5Dc&callback=findMe"></script>
 </body>
 

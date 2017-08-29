@@ -61,8 +61,9 @@ var checkLogin = function () {
 
     if (username == "arjun.panicker" && password == "Shadow1995*") {
         console.log("Login Successfull!!");
-        popup('pageLoader');
-        setTimeout('AfterLoginRedirect()', 5000);
+        // popup('pageLoader');
+        // setTimeout('AfterLoginRedirect()', 5000);
+        AfterLoginRedirect();
     }
     else {
         // username.classList.add("nvalid");
@@ -71,7 +72,7 @@ var checkLogin = function () {
 
 function AfterLoginRedirect() {
     console.log("Redirection Successfull!!")
-    window.location = "/html/home.html";
+    window.location.replace("/html/home.html");
 }
 
 

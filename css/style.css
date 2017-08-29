@@ -10,8 +10,16 @@ body {
     background-size: auto;
 }
 
-.nav-item:hover {
+active {
+    border-bottom: 1px white;
+}
+
+.nav-item:hover, .active {
     border-bottom: solid white 2px;
+}
+
+.nav-item {
+    margin-left: 5px;
 }
 
 /* .nav-item:visited {

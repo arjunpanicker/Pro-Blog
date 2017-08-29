@@ -1,0 +1,57 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    width: 100%;
+}
+
+body {
+    background: url("../images/home_background2.jpg") no-repeat;
+    background-size: cover
+}
+
+.wrapper {
+    display: flex;
+    height: 500px;
+    /* flex-flow: column wrap; */
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper > h1 {
+    text-align: center;
+    color: #F8F8FA;
+    animation: headingSlideIn 2s ease-in-out;
+}
+
+@keyframes headingSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(5em);
+    }
+    100% {
+        opacity: 1;
+        /* display: block; */
+        transform: translateY(0em);
+    }
+}
+
+.item {
+    align-self: center;
+}
+
+.dropdown-menu {
+    width: 100%;
+}
+
+
+.dropdown-menu li {
+    background: #fff;
+    width: 100%;
+    color: #000000;
+    transition: all 0.3s ease 0s;
+}
+
+.dropdown-menu li:hover {
+    background: #A6A6A7;
+}

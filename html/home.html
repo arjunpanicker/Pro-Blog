@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pro-Blog</title>
+    <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
         crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -16,10 +17,43 @@
         crossorigin="anonymous"></script>
 </head>
 
-<body>
-    <div class="jumbotron">
-        Hi Arjun Panicker!!
+<body class="container-fluid">
+
+    <nav class="navbar navbar-expand-md navbar-dark">
+        <a class="navbar-brand" href="#">Pro-blog</a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
+            aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                
+            </ul>
+            <div class="dropdown">
+                <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Signed in as Arjun Panicker <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-right">
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Account Settings</a></li>
+                    <!-- <li role="seperator" class="divider"></li> -->
+                    <hr>
+                    <li><a onclick="logout();">Log Out</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="wrapper">
+        <h1 class="item">Welcome to your home page!!</h1>
     </div>
+
+    <script>
+        function logout() {
+            window.location.replace("../index.html");
+        }
+    </script>
+
 </body>
 
 </html>
